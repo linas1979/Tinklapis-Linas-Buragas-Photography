@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="nav.home">Linas Buragas Photography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Linas Buragas Photography</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" data-lang-key="nav.home">Pagrindinis</a></li>
+                    <li><a href="#gallery-section" data-lang-key="nav.gallery">Galerija</a></li>
+                    <li><a href="apie-mane.html" data-lang-key="nav.about">Apie mane</a></li>
+                    <li><a href="#contact" data-lang-key="nav.contact">Kontaktai</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button id="lang-lt" class="lang-button active">LT</button>
+                    <button id="lang-en" class="lang-button">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 data-lang-key="hero.title">Akimirkos, užfiksuotos amžinybei</h2>
+                <p data-lang-key="hero.subtitle">Kiekviena nuotrauka pasakoja istoriją. Atraskite jas čia.</p>
+                <a href="#gallery-section" class="button" data-lang-key="hero.button">Peržiūrėti galeriją</a>
+            </div>
+        </section>
+
+        <section id="gallery-section" class="gallery">
+            <div class="container">
+                <h2 data-lang-key="gallery.title">Mūsų darbai</h2>
+                <p class="subtitle" data-lang-key="gallery.subtitle">Įsigykite Išskirtines Autorines Fotografijas</p>
+                <p data-lang-key="gallery.description">Atraskite ir įsigykite aukščiausios raiškos menines fotografijas, idealiai tinkančias spausdinimui, internetui ar jūsų internetiniams projektams.</p>
+
+                <div class="filter-controls">
+                    <button class="filter-button active" data-filter="all" data-lang-key="filters.all">Visi</button>
+                    <button class="filter-button" data-filter="nature" data-lang-key="filters.nature">Gamta</button>
+                    <button class="filter-button" data-filter="city" data-lang-key="filters.city">Miestas</button>
+                    <button class="filter-button" data-filter="animals" data-lang-key="filters.animals">Gyvūnai</button>
+                    <button class="filter-button" data-filter="transport" data-lang-key="filters.transport">Transportas</button>
+                    <button class="filter-button" data-filter="people" data-lang-key="filters.people">Žmonės</button>
+                    <button class="filter-button" data-filter="abstract" data-lang-key="filters.abstract">Abstrakcija</button>
+                </div>
+
+                <input type="text" id="searchInput" class="search-input" data-lang-key="search.placeholder" placeholder="Ieškoti nuotraukų...">
+
+                <div class="gallery-grid">
+                    </div>
+
+                <div class="quality-info">
+                    <h3 data-lang-key="gallery.qualityTitle">Nepriekaištinga Fotografijos Kokybė – Tinka Spausdinimui ir Skaitmeniniam Naudojimui</h3>
+                    <p data-lang-key="gallery.qualityDescription">Kiekvienas mūsų sukūrimas kadras – tai profesionalumo ir preciziškumo garantas. Šios aukštos raiškos fotografijos sukurtos taip, kad atrodytų nepriekaištingai tiek spausdintiniame dideliu formatu, tiek skaitmeniniame pavidale internetiniams platformoms. Įsigykite originalias, licencijuojamas nuotraukas tiesiai iš autoriaus.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart-section" class="cart">
+            <div class="container">
+                <h2 data-lang-key="cart.title">Jūsų krepšelis</h2>
+                <div id="cart-items" class="cart-items">
+                    </div>
+                <div class="cart-total">
+                    <span data-lang-key="cart.total">Viso:</span> <span id="cart-total">0.00 €</span>
+                </div>
+                <div class="cart-buttons">
+                    <button id="checkout-button" class="button primary" data-lang-key="cart.checkout">Apmokėti</button>
+                    <button id="clear-cart-button" class="button secondary" data-lang-key="cart.clear">Išvalyti krepšelį</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 data-lang-key="nav.contact">Susisiekite</h2>
+                <p>Turite klausimų? Susisiekite su mumis!</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Vardas:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">El. paštas:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Žinutė:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Siųsti</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Linas Buragas Photography. Visos teisės saugomos.</p>
+        </div>
+    </footer>
+
+    <div id="photoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modalImage" src="" alt="Photo in large view">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+            <span id="modalPrice"></span>
+            <button id="modalBuyButton" class="button" data-lang-key="modal.buy">Pirkti</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
